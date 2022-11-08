@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Cuidado con el perro</title>
+	<link rel="stylesheet" href="css/css.css">
+	<link rel="shortcut icon" href="img/IconL.png">
+
+</head>
+<body background="img/PCCEP.png">
+	<header class="header">
+		<div class="container">
+		<div class="btn-menu">
+			<label for="btn-menu">☰</label>
+		</div>
+			<div class="logo">
+				<h1><img class="Log" src="img/logo1.png" width="160px" height="80px"></h1>
+			</div>
+			
+			
+		</div>
+	</header>
+	<div class="capa"></div>
+<!--	--------------->
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+	<div class="cont-menu">
+		<nav>
+			<a href="Index.html">Inicio</a>
+			<a href="PAGINA1.html">Ropa Hombre</a>
+			<a href="PAGINA2.html">Ropa Mujer</a>
+			<a href="PAGINA3.html">Ropa Niña</a>
+			<a href="PAGINA4.html">Ropa Niño</a>
+            <a href="PAGINA5.html">Inicio de sesion</a>
+            <a href="PAGINA6.html">Descuentos</a>
+	
+		</nav>
+		<label for="btn-menu">✖️</label>
+	</div>
+</div>
+
+<br>
+<hr>
+
+<div class="desc">
+<p>Monto inicial 
+  <input type="text" id="monto_inicial" name="monto_inicial" style=" width: 100px;">
+</p>
+<p>% de descuento: 
+   <input type="text" id="descuento" name="descuento" style=" width: 100px;">
+</p>
+<p>
+  
+  Importe Descontado 
+  <input type="text" id="importe_descontado" name="importe_descontado" style=" width: 100px;" readonly="readonly">
+</p>
+<p>Total 
+  
+  <input type="text" id="total" name="total" style=" width: 100px;" readonly="readonly">
+</p>
+
+     <a href="javascript:calcular();"><span style=" float: left; margin-right: 10px; margin-bottom: 5px; font-size:20px; background-color: #CCC; color:#000;" value="" type="submit" class="button1" id="btn_calcula" name="btn_calcula"  >Calcular</span></a>
+	 <a href="javascript:reset();"><span style=" float: left; margin-right: 10px; margin-bottom: 5px; font-size:20px; background-color: #CCC; color:#000;" value="" type="reset" class="button1" id="btn_reset" name="btn_reset"  >Resetear</span></a>
+<script type="text/javascript">
+
+function calcular(){
+	//creacion de variabloes en donde se van a almacenar los datos capturados en las cajas de texto
+var monto_ini =0;
+var desc =0;
+var imp_desc = 0;
+var total =0;
+
+//Asignacion del valor capturado en la caja del texto enla variable
+monto_ini = document.getElementById('monto_inicial').value;
+desc = document.getElementById('descuento').value;
+
+//cálculo del descuento 
+imp_desc = (monto_ini * desc)/100;
+//Asignacion del resultado en la caja de importe descontado
+document.getElementById('importe_descontado').value=imp_desc;
+//calculo del total: monto inicial - importe del descuento de acuerdo al porcentaje del descuento y se asigna a la variable total
+total = monto_ini - imp_desc
+//Asignación del valor de la variable total a la caja de texto total
+document.getElementById('total').value=total;
+console.log(total);
+}
+
+</script>
+<script>
+	function reset(){
+	//creacion de variabloes en donde se van a almacenar los datos capturados en las cajas de texto
+	document.getElementById('monto_inicial').value=null;
+	document.getElementById('descuento').value=null;
+	document.getElementById('importe_descontado').value=null;
+	document.getElementById('total').value=null;
+}
+</script>
+</div>
+<center><p class="TxtI"></p></center>
+<div class="Ig">
+<img src="img/ig.png" width="25px" height="25px"> </img>
+</div>
+<h1 class="IgT">@CCLP</h1>
+<h1 class="EmaT" > Correo:cclp@gmail.com</h1>
+</body>
+</html>

@@ -1,0 +1,441 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+body{
+
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+.capa{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+    top: 0;left: 0;
+}
+/*Estilos para el encabezado*/
+.header{
+    transform: translate(0px, 0px);
+background-color: #57575780;
+    width: 100%;
+    height: 100px;
+    position:fixed;
+    top: 0;left: 15;
+}
+.container{
+    
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+}
+.btn-menu{
+    padding-left: 50px;
+}
+.container .btn-menu, .logo{
+    float: left;
+    line-height:100px;
+    
+}
+.container .btn-menu label{
+    
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+.logo h1{
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+}
+.container .menu{
+    float: right;
+    line-height: 100px;
+}
+.container .menu a{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+.container .menu a:hover{
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+}
+/*Fin de Estilos para el encabezado*/
+
+/*Menù lateral*/
+
+#btn-menu{
+    display: none;
+}
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%);
+}
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+.carr{
+    transform: translate(750px, 30px);
+}
+/*Fin de Menù lateral*/
+
+
+/*Fin de Menù lateral*/
+.carr{
+    position:sticky;
+    transform: translate(1050px, 30px);
+}
+.Tit{
+    
+padding-top: 30px;
+padding-left: 430px;
+
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 44px;
+    
+}
+.FICP{
+z-index: -1;
+    position: absolute;
+    transform: translate(100px, 150px);
+}
+.TxtI{ 
+    padding-left: 5%;
+    padding-top: 15%;
+
+    font-size: 34px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   
+}
+hr{ 
+    z-index: -1;
+    width: 1878px;
+    position:sticky;
+    left: 0%;
+    top: 100px;
+}
+.Ig{
+   position:absolute;
+    right: 110px;
+    top: 898px;
+ 
+}
+.IgT{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    top: 900px;
+}
+.EmaT{
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    right: 20px;
+    top: 930px;
+}
+/*Incio de sesion*/
+#login-box {
+    border: 1px ridge rgb(255, 255, 255);
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 12%;
+    background: #00000080;
+    padding: 20px 50px;
+}
+#login-box h1 {
+    color: white;
+}
+#login-box .form .item input {
+    width: 200px; /* Establecer el ancho apropiado */
+    border: 0; /* Primero cancele el borde, para que pueda modificar el ancho del borde inferior debajo */
+    border-bottom: 5px solid white; /* Modificar el límite inferior para mostrar el efecto de línea horizontal */
+    font-size: 18px; /* Aumentar el tamaño de fuente de forma adecuada */
+    background: #ffffff00; /* Establecer el cuadro de entrada en transparente */
+    color: white; /* El color del texto anterior se establece en blanco, pero el color del marcador de posición debe establecerse por separado */
+    padding: 5px 10px; /* Para que el contenido del marcador de posición no se muestre en la cuadrícula superior, aumente el borde interno */
+}
+#login-box .form .item i {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+#login-box button {
+    border: 0; /* Cancelar borde del botón */
+    width: 150px; /* Establecer la longitud y el ancho apropiados del botón */
+    height: 30px;
+    margin-top: 18px; /* Establezca el ancho apropiado del marco exterior superior y aumente la distancia desde el cuadro de contraseña superior */
+    font-size: 18px; /* Modificar el tamaño del texto del botón */
+    color: rgb(0, 0, 0); /* Modificar el color del texto en el botón */
+    border-radius: 25px; /* Establecer los bordes izquierdo y derecho del botón en arcos */
+    background-image: linear-gradient(to right, #ffffff 0%, #505050 100%); /* Agrega un color degradado al botón */
+}
+.Log{
+    transform: translate(720px, 15px);
+}
+.MIND{ 
+    z-index: -1;
+    transform: translate(0px, 84px);
+      position: absolute;
+    background-attachment: fixed
+  
+}
+/*Productos Hombre*/
+.producto1{
+    z-index: -1;
+
+    position: absolute;
+    left: 5%;
+    padding: 1em;
+    transition: .5s ease-in-out;
+    font-family: 'IBM Plex Mono', monospace;
+    text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+
+.producto1:hover{
+    scale: 1.08;
+
+}
+.producto2{
+    z-index: -1;
+
+    position: absolute;
+    left: 25%;
+    padding: 1em;
+    transition: .5s ease-in-out;
+    font-family: 'IBM Plex Mono', monospace;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+.producto2:hover{
+    scale: 1.08;
+}
+.producto3{
+    z-index: -1;
+
+    position: absolute;
+    left: 50%;
+    padding: 1em;
+    transition: .5s ease-in-out;
+    font-family: 'IBM Plex Mono', monospace;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+.producto3:hover{
+    scale: 1.08;
+}
+.producto4{
+    z-index: -1;
+
+    position: absolute;
+    left: 75%;
+    padding: 1em;
+    transition: .5s ease-in-out;
+    font-family: 'IBM Plex Mono', monospace;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+.producto4:hover{
+    scale: 1.08;
+}
+.Decuento{
+    z-index: -1;
+
+    position: absolute;
+    left: 75%;
+    padding: 1em;
+    transition: .5s ease-in-out;
+    font-family: 'IBM Plex Mono', monospace;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: #00000080;
+}
+
+
+.Decuento:hover{
+    scale: 1.08;
+}
+.VidCCEP{
+    
+    position:fixed;
+    transform: translate(1420px, 200px);
+}
+/*Btn inico*/
+.wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button {
+    min-width: 200px;
+    min-height: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #0000ff;
+    background: #8a4e27;
+  background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px #8a4e27;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    }
+  
+  button::before {
+  content: '';
+    border-radius: 200px;
+    min-width: calc(189px + 12px);
+    min-height: calc(34px + 12px);
+    border: 6px solid #8a4e27;
+    box-shadow: 0 0 60px #8a4e27;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .button:hover, .button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+  
+  button:hover::before, button:focus::before {
+    opacity: 1;
+  }
+  .desc{
+   
+        color: #ffffff;
+    
+      
+    position: absolute;
+    top:100px;
+    left: 650px;
+    border-radius: 10px;
+    border: 1px ridge rgb(255, 255, 255);
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 12%;
+    background: #00000080;
+    padding: 20px 50px;
+  }
+  .button1 {
+    min-width: 100px;
+    min-height: 25px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #0000ff;
+    background: #000000;
+  background: linear-gradient(90deg, #8a4e27 0%, #8a4e27 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px #8a4e27;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    left: 90px;
+    top:10PX ;
+    padding: 10px;
+    }
+  
+  .button1::before {
+  content: '';
+    border-radius: 200px;
+    min-width: calc(120px + 12px);
+    min-height: calc(24px + 12px);
+    border: 6px solid #000000;
+    box-shadow: 0 0 60px #8a4e27;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .button1:hover, .button1:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+  
+  .button1:hover::before, .button1:focus::before {
+    opacity: 1;
+  }
+ 
+  /*Menu descuento*/
+  
